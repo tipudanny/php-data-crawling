@@ -1,11 +1,13 @@
-# php-data-crawling
+## php-data-crawling
+
 How to crawling data using PHP
 
-include simple_html_dom.php file to your file.
-
+``` bash
+include simple_html_dom.php
+```
 simple_html_dom.php file contains all of the php crawling methods.
 
-Write your code to find data
+# Write your code to find data
 
 Write you code into wev-scrip.php file for get data from other website.
 
@@ -14,14 +16,16 @@ I am fatching Data from W3 Schools Website.
 First Include the simple_html_dom.php file-
 
 
+```php
+
 include ('simple_html_dom.php');
-
+```
 using file_get_html() function for get all data from your url.
-
 
 then you can filter and find your information which you need
 
-<? php
+
+```php
   include ('simple_html_dom.php');
   
 	$html = file_get_html('https://www.w3schools.com/');
@@ -29,11 +33,10 @@ then you can filter and find your information which you need
 	$title = $html->find('title',0)->plaintext;
 	
 	echo $title;
-?>
-
+```
 here i am usning some loop for fetching an array of Data.
 
-<?php 
+```php
 	
 include ('simple_html_dom.php');
 
@@ -59,5 +62,4 @@ foreach ($list_array as $item) {
 	
 }
 
-
-?>
+```
