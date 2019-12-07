@@ -24,6 +24,7 @@ then you can filter and find your information which you need
 	$html = file_get_html('https://www.w3schools.com/');
 	$title = $html->find('title',0)->plaintext;
 	echo $title;
+	echo "<hr>";
 ?>
 #where i am usning some loop for fetching an array of Data.
 <?php 
@@ -32,7 +33,7 @@ include ('simple_html_dom.php');
 $html = file_get_html('https://www.w3schools.com/');
 $title = $html->find('title',0)->plaintext;
 echo $title;
-echo "<br>"."<hr>";
+echo "<hr>";
 
 $list = $html -> find('div[class="w3-col l4 m12"]',0);
 $list_array = $list -> find('a');
@@ -40,7 +41,7 @@ $list_array = $list -> find('a');
 $len = sizeof($list_array);
 
 // using foreach loop
-echo "Using foreach loop"."<br>"."<hr>";
+echo "Using foreach loop";
 foreach ($list_array as $item) {
 	echo $item->plaintext;
 	echo "<br>";
